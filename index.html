@@ -3,53 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 02 - Noticia en HTML</title>
+    <title>Actividad 03 - Noticia Semántica y Formulario</title>
 </head>
 <body>
 
-    <h1>La inflación continuó con tendencia al alza y fue de 3,4% en marzo, la cifra más alta en un año</h1>
+    <header>
+        <h1>Portal de Noticias Económicas</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Economía</a></li>
+                <li><a href="#">Sociedad</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h2>El Indec informó que los precios acumularon una suba de 9,4% en lo que va de 2026 y un 32,6% interanual</h2>
+    <main>
+        <article>
+            <header>
+                <h1>La inflación continuó con tendencia al alza y fue de 3,4% en marzo, la cifra más alta en un año</h1>
+                <p>Publicado el <time datetime="2026-04-15">15 de abril de 2026</time></p>
+                <h2>El Indec informó que los precios acumularon una suba de 9,4% en lo que va de 2026 y un 32,6% interanual</h2>
+            </header>
 
-    <p>
-        El Instituto Nacional de Estadística y Censos (Indec) informó que la inflación de marzo fue de
-        <strong>3,4%</strong>, el valor mensual más alto del último año. Además, el incremento acumulado en
-        lo que va de 2026 llegó al <strong>9,4%</strong>, mientras que la variación interanual alcanzó el
-        <strong>32,6%</strong>.
-    </p>
+            <section id="cuerpo-noticia">
+                <p>
+                    El <abbr title="Instituto Nacional de Estadística y Censos">Indec</abbr> informó que la inflación de marzo fue de
+                    <strong>3,4%</strong>, el valor mensual más alto del último año. Además, el incremento acumulado en
+                    lo que va de 2026 llegó al <span class="destacado">9,4%</span>, mientras que la variación interanual alcanzó el
+                    <strong>32,6%</strong>.
+                </p>
 
-    <h2>Rubros con mayores aumentos</h2>
+                <h2>Rubros con mayores aumentos</h2>
+                <p>
+                    La división que registró la mayor suba en marzo fue <strong>Educación</strong>, con un aumento de
+                    <strong>12%</strong>. También estuvieron por encima del promedio general Transporte (4,1%),
+                    Vivienda, agua, electricidad, gas y otros combustibles (3,7%) y Recreación y cultura (3,6%).
+                </p>
 
-    <p>
-        La división que registró la mayor suba en marzo fue <strong>Educación</strong>, con un aumento de
-        <strong>12%</strong>. También estuvieron por encima del promedio general Transporte (4,1%),
-        Vivienda, agua, electricidad, gas y otros combustibles (3,7%) y Recreación y cultura (3,6%).
-    </p>
+                <p>
+                    En cambio, las menores variaciones del mes se dieron en Bienes y servicios varios (1,7%) y en
+                    Equipamiento y mantenimiento del hogar (1,3%).
+                </p>
+            </section>
 
-    <p>
-        En cambio, las menores variaciones del mes se dieron en Bienes y servicios varios (1,7%) y en
-        Equipamiento y mantenimiento del hogar (1,3%).
-    </p>
+            <section id="alimentos">
+                <h2>Alimentos y bebidas</h2>
+                <p>
+                    En la categoría Alimentos y bebidas no alcohólicas, los aumentos promediaron el 3,4%. 
+                    Podés consultar el informe completo en el <a href="https://www.indec.gob.ar/" target="_blank">sitio oficial del Indec</a>.
+                </p>
+            </section>
+        </article>
 
-    <h2>Alimentos y bebidas</h2>
+        <aside>
+            <section id="suscripcion">
+                <fieldset>
+                    <legend><h3>Suscribite a nuestro Newsletter</h3></legend>
+                    <p>Recibí las últimas novedades económicas en tu email.</p>
+                    
+                    <form action="#" method="post">
+                        <div>
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="user_name" placeholder="Ej: Juan Pérez" required>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="user_email" placeholder="nombre@ejemplo.com" required>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="interes">Interés principal:</label>
+                            <select id="interes" name="user_interest">
+                                <option value="inflacion">Inflación</option>
+                                <option value="mercados">Mercados</option>
+                                <option value="empleo">Empleo</option>
+                            </select>
+                        </div>
+                        <br>
+                        <button type="submit">Enviar suscripción</button>
+                    </form>
+                </fieldset>
+            </section>
+        </aside>
+    </main>
 
-    <p>
-        En la categoría Alimentos y bebidas no alcohólicas, los aumentos promediaron el 3,4%, un valor
-        apenas superior al registrado en febrero. Dentro de ese rubro, el organismo destacó la suba de
-        Carnes y derivados, especialmente en la región Pampeana.
-    </p>
-
-    <h2>Reacciones del Gobierno</h2>
-
-    <p>
-        Luego de conocerse el dato oficial, el presidente Javier Milei reconoció que el índice fue negativo,
-        aunque sostuvo que existen elementos para esperar una baja futura de la inflación.
-    </p>
-
-    <p>
-        Por su parte, el ministro de Economía, Luis Caputo, remarcó la desaceleración de la Canasta Básica
-        Alimentaria, que pasó de 3,2% mensual en febrero a 2,2% en marzo.
-    </p>
+    <footer>
+        <p>&copy; 2026 Desarrollo y Arquitectura Web - UAI Rosario</p>
+    </footer>
 
 </body>
 </html>
