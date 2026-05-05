@@ -1,0 +1,140 @@
+/* 1. Selector Universal: Reseteo básico de la caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Selectores de Etiqueta: Estilos generales del documento */
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+/* 3. Selectores de ID: Layout y estructura principal */
+#cabecera-principal {
+    background-color: #ff5a00; /* Naranja característico de Rosario3 */
+    color: #ffffff;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedor-nota {
+    max-width: 850px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+#pie-pagina {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #666666;
+    background-color: #e9ecef;
+    margin-top: 50px;
+}
+
+/* 4. Selectores Descendentes: Menú de navegación */
+.menu-superior ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.menu-superior ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menu-superior ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+.menu-superior ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 5. Selectores de Clase: Estilos tipográficos y visuales de la nota */
+.logo {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.logo-numero {
+    color: #333333;
+    background-color: #ffffff;
+    padding: 0 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+.volanta {
+    color: #ff5a00;
+    font-weight: 800;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.encabezado-articulo h1 {
+    font-size: 2.5rem;
+    line-height: 1.15;
+    color: #111111;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.bajada {
+    font-size: 1.25rem;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.fecha-autor {
+    font-size: 0.9rem;
+    color: #777777;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding: 15px 0;
+    margin-bottom: 35px;
+}
+
+.foto-obra {
+    width: 100%; /* Ocupa todo el ancho disponible del contenedor */
+    height: auto; /* Mantiene la proporción original de la foto */
+    border-radius: 4px; /* Mantiene los bordes redondeados */
+    display: block; /* Evita espacios en blanco debajo de la imagen */
+}
+
+.imagen-principal figcaption {
+    font-size: 0.85rem;
+    color: #777777;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    text-align: right;
+}
+
+.cuerpo-texto p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #222222;
+}
+
+.cuerpo-texto h3 {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #111111;
+}
