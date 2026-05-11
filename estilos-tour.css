@@ -1,0 +1,184 @@
+/* =========================================
+   1. SELECTOR UNIVERSAL Y RESETEO
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    /* Box-sizing es vital para el diseño responsive */
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Merriweather', 'Georgia', serif; /* Tipografía clásica de lectura */
+    background-color: #f4f4f4;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. DISEÑO MÓVIL (MOBILE FIRST - Base)
+   ========================================= */
+.cabecera-sitio {
+    background-color: #ffffff;
+    border-bottom: 4px solid #cc0000; /* Borde rojo clásico de La Capital */
+    padding: 15px; /* Box Model: Padding */
+    text-align: center;
+}
+
+.logo-diario {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #000000;
+    letter-spacing: -1px;
+    margin-bottom: 15px; /* Box Model: Margen */
+}
+
+.navegacion-principal ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.navegacion-principal a {
+    text-decoration: none;
+    color: #555555;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contenedor-principal {
+    width: 100%;
+    padding: 20px 15px; /* Padding lateral para que el texto no toque los bordes del celular */
+}
+
+.volanta {
+    color: #cc0000;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.encabezado-articulo h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #111111;
+}
+
+.bajada {
+    font-size: 1.1rem;
+    color: #444444;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.meta-datos {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    color: #777777;
+    border-top: 1px solid #dddddd; /* Box Model: Bordes */
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 0;
+    margin-bottom: 25px;
+}
+
+.foto-responsive {
+    width: 100%; /* La imagen ocupa el 100% del contenedor en celular */
+    height: auto;
+    display: block;
+}
+
+.imagen-noticia figcaption {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+    color: #666666;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.cuerpo-texto p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
+
+.caja-informacion {
+    background-color: #f9ecec; /* Fondo rojizo suave */
+    border-left: 4px solid #cc0000; /* Resalte lateral */
+    padding: 15px;
+    margin: 30px 0;
+}
+
+.caja-informacion h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #cc0000;
+}
+
+.pie-de-pagina {
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+    margin-top: 40px;
+}
+
+/* =========================================
+   3. MEDIA QUERIES: TABLET (Mínimo 768px)
+   ========================================= */
+@media (min-width: 768px) {
+    .cabecera-sitio {
+        display: flex;
+        justify-content: space-between; /* Separa logo y menú a los extremos */
+        align-items: center;
+        padding: 15px 30px;
+    }
+
+    .logo-diario {
+        margin-bottom: 0;
+    }
+
+    .encabezado-articulo h1 {
+        font-size: 2.4rem; /* Título más grande en tablet */
+    }
+
+    .cuerpo-texto p {
+        font-size: 1.15rem;
+    }
+}
+
+/* =========================================
+   4. MEDIA QUERIES: DESKTOP (Mínimo 1024px)
+   ========================================= */
+@media (min-width: 1024px) {
+    .contenedor-principal {
+        max-width: 850px; /* Limita el ancho de lectura */
+        margin: 40px auto; /* Centra el bloque en pantallas grandes */
+        background-color: #ffffff;
+        padding: 50px; /* Mucho más aire interior */
+        box-shadow: 0 2px 15px rgba(0,0,0,0.05); /* Sombra suave de tarjeta */
+        border-radius: 4px;
+    }
+
+    .encabezado-articulo h1 {
+        font-size: 2.8rem; /* Tamaño de titular de diario en monitor */
+    }
+
+    .bajada {
+        font-size: 1.3rem;
+    }
+
+    .cuerpo-texto p {
+        font-size: 1.2rem; /* Tamaño ideal de lectura en PC */
+        line-height: 1.8;
+    }
+}
